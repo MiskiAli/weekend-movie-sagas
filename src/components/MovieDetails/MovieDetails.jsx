@@ -6,7 +6,7 @@ import { useHistory, useParams } from "react-router-dom";
 function MovieDetails(){
     const dispatch = useDispatch();
     const history = useHistory()
-
+    const params = useParams();
 return(
     <>
     

@@ -65,7 +65,7 @@ const genres = (state = [], action) => {
 
 const movieDeets = (state = [], action) => {
     switch (action.type) {
-        case 'FETCH_MOVIES':
+        case 'FETCH_MOVIE_DETAILS':
             return action.payload;
         default:
             return state;
