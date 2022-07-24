@@ -16,6 +16,25 @@ router.get('/', (req, res) => {
 
 });
 
+
+// GET request from the database
+router.get('/details/:id', (req, res) => {
+const sqlQuery = `SELECT ARRAY_AGG (genres.name) AS name, moives.description AS description
+movies.id AS id, moives.poster AS poster, moives.title AS title FROM movies JOIN movies_genres ON movies_genres.movie_id = movies.id
+JOIN genres ON movies_genres.genre_id = genres.id
+WHERE movies.id = $1
+GROUP BY movies.id;`; 
+
+const sqlParams =[req.params.id]
+pool.query(sqlQuery, sqlParams).then((respone)=>{
+  res.send(response.rows);
+}).catch ((error)=>{
+  console.log('error in get request from db.. check movie router', error);
+})
+})
+
+
+
 router.post('/', (req, res) => {
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie
