@@ -2,3 +2,35 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.movieSaga{
+    /* background: rgb(170, 166, 226); */
+	background: linear-gradient(
+		90deg,
+		#32CD30,
+		#2C5E1A,
+		#1A4314,
+        #B2D2A4)
+}
+.movieHead{
+    color: #B2D2A4;
+}
+.div{
+    
+    background-color: #B2D2A4;
+    border: 1px solid black;
+	width: 200px;
+	height: 359px;
+	display: inline-grid;
+	margin: 50px;
+	align-items: center;
+	border-radius: 10px;
+    cursor: pointer;
+}
+
+img{
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+}
+

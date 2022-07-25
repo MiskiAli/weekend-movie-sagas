@@ -15,9 +15,11 @@ import axios from 'axios';
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('FETCH_MOVIE_DETAILS', fetchAllDetails);
-
+    // yield takeEvery('FETCH_MOVIE_DETAILS', fetchAllDetails);
 }
 
+
+// SAGA 
 function* fetchAllMovies() {
     // get all movies from the DB
     try {
@@ -31,13 +33,17 @@ function* fetchAllMovies() {
         
 }
 
-// PUT REQ
+// SAGA 
 function* fetchAllDetails(action){
-const details = yield axios.get(`/api/movie/details/${action.payload}`)
+    try{
+const details = yield axios.get(`/api/movie/${action.payload}`)
 console.log ('in fetchAllDetails in index', details.data);
-yield put({ type: 'FETCH_MOVIE_DETAILS', payload: details.data [0]});
-
+yield put({ type: 'FETCH_DETAILS', payload: details.data})
+    }catch {
+    console.log('get all error');
 }
+}
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -65,7 +71,7 @@ const genres = (state = [], action) => {
 
 const movieDeets = (state = [], action) => {
     switch (action.type) {
-        case 'FETCH_MOVIE_DETAILS':
+        case 'FETCH_DETAILS':
             return action.payload;
         default:
             return state;

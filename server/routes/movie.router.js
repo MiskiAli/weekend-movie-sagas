@@ -16,22 +16,37 @@ router.get('/', (req, res) => {
 
 });
 
+router.get('/:id', (req, res) => {
 
-// GET request from the database
-router.get('/details/:id', (req, res) => {
-const sqlQuery = `SELECT ARRAY_AGG (genres.name) AS name, moives.description AS description
-movies.id AS id, moives.poster AS poster, moives.title AS title FROM movies JOIN movies_genres ON movies_genres.movie_id = movies.id
+  console.log('get all details', req.params.id);
+  const sqlText = // to_json converts it into a string and array_agg divides and adds them.
+  `SELECT 
+  movies.*, array_agg(to_json(genres)) AS genres FROM movies
+JOIN movies_genres ON movies_genres.movie_id = movies.id
 JOIN genres ON movies_genres.genre_id = genres.id
-WHERE movies.id = $1
-GROUP BY movies.id;`; 
+WHERE movies.id = $1 GROUP BY movies.id;
+`;
 
-const sqlParams =[req.params.id]
-pool.query(sqlQuery, sqlParams).then((respone)=>{
-  res.send(response.rows);
-}).catch ((error)=>{
-  console.log('error in get request from db.. check movie router', error);
-})
-})
+  const sqlParms= [req.params.id]
+  pool.query(sqlText, sqlParms)
+  .then((dbRes) => {
+    console.log('dbRes.rows[0]', dbRes.rows[0]);
+
+    if (dbRes.rows.length === 0) {
+      console.log(`No movies matching id ${req.params.id}`);
+      res.sendStatus(404);
+      return;
+    }
+
+    res.send(dbRes.rows[0]);
+  })
+  .catch(err => {
+    console.error(`GET /movie/:id failed ${err}`, );
+    res.sendStatus(500);
+  });
+
+});
+
 
 
 
