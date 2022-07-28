@@ -30,7 +30,7 @@ return(
                 <li key={genre.id}>{genre.name}</li>
                 ))}
             </ul>
-                {/* <div key={fetchAllDetails.id}> */}
+            
             <h3>{details.title}'s details</h3>
             <img src={details.poster} alt = {details.title} />
             <p>{details.description}</p>

@@ -40,8 +40,8 @@ WHERE movies.id = $1 GROUP BY movies.id;
 
     res.send(dbRes.rows[0]);
   })
-  .catch(err => {
-    console.error(`GET /movie/:id failed ${err}`, );
+  .catch(error => {
+    console.error(`GET /movie/:id failed ${error}`, );
     res.sendStatus(500);
   });
 

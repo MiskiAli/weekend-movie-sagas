@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App.js';
@@ -10,13 +10,16 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
+// import { useEffect } from 'react';
+
 
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    yield takeEvery('FETCH_MOVIE_DETAILS', fetchAllDetails);
+    yield takeEvery('FETCH_MOVIE_DETAILS', fetchAllDetails); //'FETCH_MOVIE_DETAILS' is undefined?
     // yield takeEvery('FETCH_MOVIE_DETAILS', fetchAllDetails);
 }
+
 
 
 // SAGA 
