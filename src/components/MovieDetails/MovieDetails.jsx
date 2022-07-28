@@ -24,14 +24,14 @@ const homePage = ()=>{
 
 return(
     <div>
-            <h2>Movie view</h2>
-            <ul>
+            <h2 className="movieview">Movie view</h2>
+            <div className="description">
                 {details.genres && details.genres.map(genre => (
-                <li key={genre.id}>{genre.name}</li>
+                <p key={genre.id}>{genre.name}</p>
                 ))}
-            </ul>
+            </div>
             
-            <h3>{details.title}'s details</h3>
+            <h3 className="movieview" >{details.title}'s Details</h3>
             <img src={details.poster} alt = {details.title} />
             <p className="description" >{details.description}</p>
             <button className="button-64" role="button" type="submit" onClick={homePage}>Home page</button>
