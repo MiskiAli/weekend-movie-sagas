@@ -5,20 +5,17 @@
 
 .movieSaga{
     /* background: rgb(170, 166, 226); */
-	background: linear-gradient(
-		90deg,
-		#32CD30,
-		#2C5E1A,
-		#1A4314,
-        #B2D2A4)
+    background-image: linear-gradient(90deg, #0d03bd, #7357d4 50% ,#30d7f9);
+
 }
 .movieHead{
-    color: #B2D2A4;
+    color: #180169;
 }
 .div{
-    
-    background-color: #B2D2A4;
-    border: 1px solid black;
+    align-content: center;
+    background-color: #180169;
+    color: #9d81ff;
+    border: 1px solid #9defff;
 	width: 200px;
 	height: 359px;
 	display: inline-grid;
@@ -34,7 +31,7 @@ img{
     height: 300px;
 }
 
-.button{
+/* .button{
     width: 90px;
     height:30px;
     border: none;
@@ -46,4 +43,57 @@ img{
     cursor: pointer;
     background-color:#1A4314, ;
     border: 2px solid #B2D2A4 ;
+} */
+
+/* <!-- HTML !--> */
+/* <button class="button-64" role="button"><span class="text">Button 64</span></button> */
+
+/* CSS */
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50% ,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(5, 0, 11, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+
+.button-64 {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 30px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-64:hover {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+    }
 }

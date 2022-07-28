@@ -33,8 +33,8 @@ return(
             
             <h3>{details.title}'s details</h3>
             <img src={details.poster} alt = {details.title} />
-            <p>{details.description}</p>
-            <button className="button" type="submit" onClick={homePage}>Home page</button>
+            <p className="description" >{details.description}</p>
+            <button className="button-64" role="button" type="submit" onClick={homePage}>Home page</button>
         </div>
 )
 }
