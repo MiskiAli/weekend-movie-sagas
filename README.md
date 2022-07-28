@@ -8,9 +8,10 @@ Duration: 10 hours
 This App is able to display movies to the user. When you click on the movie image or title box the user will have the ability to see the movie details/description and the movie's genre.
 
 ## Prerequisites
- npm install
- npm run server
- npm run client
+
+ npm install,
+ npm run server, 
+ npm run client,
 
  ## Screenshots
 
