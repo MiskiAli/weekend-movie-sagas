@@ -7,13 +7,13 @@ function Details(){
     const dispatch = useDispatch();
     const history = useHistory()
     const details = useSelector(store => store.movieDeets)
-    const params = useParams()
+    const { id } = useParams()
 
 
     useEffect(()=> {
         dispatch({
             type: 'FETCH_MOVIE_DETAILS',
-            payload: params.id
+            payload: id
         })
     },[])
 

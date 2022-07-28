@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => { //made a change here, fix later
 
   console.log('get all details', req.params.id);
   const sqlText = // to_json converts it into a string and array_agg divides and adds them.
