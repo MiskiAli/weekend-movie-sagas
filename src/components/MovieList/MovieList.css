@@ -34,3 +34,16 @@ img{
     height: 300px;
 }
 
+.button{
+    width: 90px;
+    height:30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color:#1A4314, ;
+    border: 2px solid #B2D2A4 ;
+}

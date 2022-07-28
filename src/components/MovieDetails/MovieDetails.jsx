@@ -34,7 +34,7 @@ return(
             <h3>{details.title}'s details</h3>
             <img src={details.poster} alt = {details.title} />
             <p>{details.description}</p>
-            <button type="submit" onClick={homePage}>Home page</button>
+            <button className="button" type="submit" onClick={homePage}>Home page</button>
         </div>
 )
 }
