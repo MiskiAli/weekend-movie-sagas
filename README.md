@@ -1,9 +1,25 @@
-# Project Name
+# Movie Sagas
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+
 
 ## Description
+Duration: 10 hours
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This App is able to display movies to the user. When you click on the movie image or title box the user will have the ability to see the movie details/description and the movie's genre.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Prerequisites
+ npm install
+ npm run server
+ npm run client
+
+ ## Screenshots
+
+![image description](Screenshot.png/screenshots.png)
+![image description](Screenshot.png/screenshots2.png)
+
+## Acknowledgements
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. Thanks to my instructor, Liz and my supportive classmates in the Jemisin cohort.
+
+## Support
+If you have any questions or comments, please email me at [miskiali222@gmail.com]
+

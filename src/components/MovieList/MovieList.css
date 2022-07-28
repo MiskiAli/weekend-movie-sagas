@@ -62,9 +62,9 @@ img{
     font-size: 20px;
     justify-content: center;
     line-height: 1em;
-    max-width: 100%;
-    min-width: 140px;
-    padding: 3px;
+    max-width: 50%;
+    min-width: 100px;
+    padding: 2px;
     text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
@@ -82,8 +82,8 @@ img{
     background-color: rgb(0, 0, 0);
     padding: 16px 24px;
     border-radius: 6px;
-    width: 30px;
-    height: 100%;
+    width: 20px;
+    height: 50%;
     transition: 300ms;
 }
 
